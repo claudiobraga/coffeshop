@@ -1,0 +1,68 @@
+import java.util.Scanner;
+public coffeshop{
+    public static void main(String[] args){
+
+        Scanner entrada = new Scanner(System.in);
+        int opc, qtidade, codigo, valpago = 0;
+        double valpago1;
+
+        System.out.println("********** M E N U ************** ");
+        System.out.println("Nome     |   Código  |   Preço  * ");
+        System.out.println("---------|-----------|------------");
+        System.out.println("Cachorro |   100     |      2   * ");
+        System.out.println("Hamburgér|   110     |      2,5 * ");
+        System.out.println("Bitoque  |   120     |      6   * ");
+        System.out.println("Sumol    |   130     |      1,5 * ");
+        System.out.println("********** W E N U ************** ");
+        System.out.println("");
+
+        System.out.println(" Introduza o Código do Produto do Menu: ");
+        codigo = entrada.nextInt();
+
+        if (codigo == 100)
+        {
+            System.out.println(" Cachorro Quente! 2 Euros a unidade. Quntos quer? ");
+        }
+        else if (codigo == 110)
+        {
+            System.out.println(" Hamburgér! 2,5 Euros a Unidade. Quntos quer? ");
+        }
+        else if (codigo == 120)
+        {
+            System.out.println(" Bitoque! 6 Euros a Unidade. Quantos quer ?");
+        }
+        else if (codigo == 130)
+        {
+            System.out.println(" Sumol! 1,5 Euro a Unidade. Quantas quer? ");
+        }
+        else
+        {
+            System.out.println(" Introduziu um código fora do Menu");
+        }
+
+        System.out.println(" Introduza a Quantidade desejada :");
+        qtidade = entrada.nextInt();
+
+        switch (codigo)
+        {
+            case 100 :
+                valpago = qtidade * 2;
+                System.out.println(" O valor a ser pago é de : " + valpago + "€");
+                break;
+            case 110 :
+                valpago1 = qtidade * 2.5;
+                System.out.println(" O valor a ser pago é de : " + valpago1 + "€");
+                break;
+            case 120 :
+                valpago = qtidade * 6;
+                System.out.println(" O valor a ser pago é de : " + valpago + "€");
+                break;
+            case 130 :
+                valpago1 = qtidade * 1.5;
+                System.out.println(" O valor a ser pago é de : " + valpago1 + "€");
+                break;
+            default:
+                System.out.println(" Opção inválida. Isira uma das opções do M E N U. Obrigado");
+        }
+    }
+}
